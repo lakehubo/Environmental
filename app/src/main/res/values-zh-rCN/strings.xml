@@ -2,4 +2,15 @@
     <string name="app_name">包头环保</string>
     <string name="enter_app">点击进入</string>
     <string name="jump_guide">跳过</string>
+    <string name="search_text">搜索</string>
+    <string name="search_hint">点击进行搜索...</string>
+    <string name="news">新闻动态</string>
+    <string name="web_site_through">网站直通</string>
+    <string name="ask_answer">你问我答</string>
+    <string name="download">资料下载</string>
+    <string name="activation_record">活动记录</string>
+    <string name="environmental_policies">环保政策</string>
+    <string name="a_prize_competition">有奖竞答</string>
+    <string name="science_highlights">科普集萃</string>
+    <string name="funny_games">趣味游戏</string>
 </resources>

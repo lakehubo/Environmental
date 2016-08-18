@@ -8,4 +8,6 @@
     <color name="color_half_white">#60ffffff</color>
     <color name="color_half_dark">#60bbbbbb</color>
     <color name="color_green">#55ee9d</color>
+    <color name="color_blue">#0099ff</color>
+    <color name="color_orange">#ff9900</color>
 </resources>

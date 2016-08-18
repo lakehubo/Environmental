@@ -2,4 +2,15 @@
     <string name="app_name">Environmental</string>
     <string name="enter_app">Enter</string>
     <string name="jump_guide">skip</string>
+    <string name="search_text">Search</string>
+    <string name="search_hint">Click to Search...</string>
+    <string name="news">News</string>
+    <string name="web_site_through">Web site through</string>
+    <string name="ask_answer">Ask Answer</string>
+    <string name="download">Download Files</string>
+    <string name="activation_record">Activation Record</string>
+    <string name="environmental_policies">Environmental Policies</string>
+    <string name="a_prize_competition">A prize competition</string>
+    <string name="science_highlights">Science highlights</string>
+    <string name="funny_games">Funny Games</string>
 </resources>
