@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_content"
@@ -8,37 +8,75 @@
     android:fitsSystemWindows="true"
     tools:context="com.environmental.lake.environmental.guideActivity">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/appbar_padding_top"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/AppTheme.PopupOverlay">
-
-        </android.support.v7.widget.Toolbar>
-
-    </android.support.design.widget.AppBarLayout>
-
     <android.support.v4.view.ViewPager
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <FrameLayout
+        android:id="@+id/fm_skip"
+        android:clickable="true"
+        android:background="@drawable/enter_bg"
+        android:layout_gravity="top|right"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="60dp"
+        android:layout_height="30dp">
+        <TextView
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:text="@string/jump_guide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/fm_enter_app"
+        android:clickable="true"
+        android:background="@drawable/enter_bg"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="60dp"
+        android:layout_width="100dp"
+        android:layout_height="40dp">
+        <TextView
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:text="@string/enter_app"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/img_guide_f_dont"
+                android:layout_marginRight="15dp"
+                android:background="@color/colorAccent"
+                android:layout_gravity="center"
+                android:layout_width="6dp"
+                android:layout_height="6dp" />
+            <ImageView
+                android:id="@+id/img_guide_s_dont"
+                android:layout_marginRight="15dp"
+                android:background="@color/colorWhite"
+                android:layout_gravity="center"
+                android:layout_width="6dp"
+                android:layout_height="6dp" />
+            <ImageView
+                android:id="@+id/img_guide_t_dont"
+                android:background="@color/colorWhite"
+                android:layout_gravity="center"
+                android:layout_width="6dp"
+                android:layout_height="6dp" />
+        </LinearLayout>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email" />
-
-</android.support.design.widget.CoordinatorLayout>
+    </FrameLayout>
+</FrameLayout>
