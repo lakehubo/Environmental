@@ -5,9 +5,10 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorBlack">#000000</color>
     <color name="colorWhite">#ffffff</color>
-    <color name="color_half_white">#60ffffff</color>
+    <color name="color_half_white">#aaffffff</color>
     <color name="color_half_dark">#60bbbbbb</color>
     <color name="color_green">#55ee9d</color>
     <color name="color_blue">#0099ff</color>
     <color name="color_orange">#ff9900</color>
+    <color name="color_sky_blue">#10e4d8</color>
 </resources>

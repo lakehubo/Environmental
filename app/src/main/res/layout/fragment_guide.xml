@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.environmental.lake.environmental.guideActivity$PlaceholderFragment">
+    tools:context=".GuideActivity$PlaceholderFragment">
     <ImageView
         android:id="@+id/img_guide"
         android:layout_width="match_parent"

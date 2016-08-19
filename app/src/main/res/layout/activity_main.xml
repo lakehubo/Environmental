@@ -86,7 +86,7 @@
                         android:background="@color/colorAccent"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginRight="2.5dp"
                         android:layout_weight="1">
                         <TextView
                             android:textColor="@color/colorWhite"
@@ -100,8 +100,8 @@
                         android:background="@color/colorAccent"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="2.5dp"
+                        android:layout_marginRight="2.5dp"
                         android:layout_weight="1">
                         <TextView
                             android:textColor="@color/colorWhite"
@@ -115,7 +115,7 @@
                         android:background="@color/colorAccent"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="2.5dp"
                         android:layout_weight="1">
                         <TextView
                             android:textColor="@color/colorWhite"
@@ -133,7 +133,7 @@
                 android:orientation="vertical"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
-                android:paddingTop="10dp">
+                android:paddingTop="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -144,7 +144,7 @@
                         android:background="@color/color_blue"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginRight="2.5dp"
                         android:layout_weight="1">
                         <TextView
                             android:textColor="@color/colorWhite"
@@ -158,8 +158,8 @@
                         android:background="@color/color_blue"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="2.5dp"
+                        android:layout_marginRight="2.5dp"
                         android:layout_weight="1">
                         <TextView
                             android:textColor="@color/colorWhite"
@@ -173,7 +173,7 @@
                         android:background="@color/color_blue"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="2.5dp"
                         android:layout_weight="1">
                         <TextView
                             android:textColor="@color/colorWhite"
@@ -192,7 +192,7 @@
                 android:orientation="vertical"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
-                android:paddingTop="10dp">
+                android:paddingTop="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -203,7 +203,7 @@
                         android:background="@color/color_orange"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginRight="2.5dp"
                         android:layout_weight="1">
                         <TextView
                             android:textColor="@color/colorWhite"
@@ -217,8 +217,8 @@
                         android:background="@color/color_orange"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="2.5dp"
+                        android:layout_marginRight="2.5dp"
                         android:layout_weight="1">
                         <TextView
                             android:textColor="@color/colorWhite"
@@ -232,7 +232,7 @@
                         android:background="@color/color_orange"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="2.5dp"
                         android:layout_weight="1">
                         <TextView
                             android:textColor="@color/colorWhite"
@@ -254,6 +254,7 @@
         android:background="@null">
 
         <LinearLayout
+            android:background="@color/color_half_white"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
@@ -294,8 +295,8 @@
                     android:gravity="center|left"
                     android:text="@string/search_hint" />
             </LinearLayout>
-        </LinearLayout>
 
+        </LinearLayout>
     </FrameLayout>
 </FrameLayout>
 

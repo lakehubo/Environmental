@@ -19,7 +19,7 @@ import android.widget.ImageView;
 
 import com.environmental.lake.util.SystemBarTintManager;
 
-public class guideActivity extends AppCompatActivity {
+public class GuideActivity extends AppCompatActivity {
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private FrameLayout fm_btn_skip;

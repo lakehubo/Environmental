@@ -13,4 +13,7 @@
     <string name="a_prize_competition">A prize competition</string>
     <string name="science_highlights">Science highlights</string>
     <string name="funny_games">Funny Games</string>
+
+    <!--getweather-->
+    <string name="weather_error">Get Weather Info Failed!</string>
 </resources>
