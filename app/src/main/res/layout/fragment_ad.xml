@@ -1,0 +1,15 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.environmental.lake.fragment.Fragment_ad">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/ad_imgeview"
+        android:background="@color/color_sky_blue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+
+</FrameLayout>

@@ -1,35 +1,37 @@
 package com.environmental.lake.environmental;
 
 import android.os.Build;
+import android.support.design.widget.TabLayout;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.environmental.lake.asynctask.GetWeatherAsyncTask;
+import com.environmental.lake.adapter.MainPagerAdapter;
 import com.environmental.lake.util.SystemBarTintManager;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
-    private TextView mCityName;
-    private TextView weather_datetime;
-    private ImageView img_weatheriamg;
-    private TextView weather_temp;
-    private TextView weather_imgName;
-    private TextView weather_tempall;
-    private TextView weather_today;
-    private ImageView weather_imag_today;
-    private TextView weather_today_temp;
-    private TextView weather_tomorrow;
-    private ImageView weather_imag_tomorrow;
-    private TextView weather_tomorrow_temp;
-    private TextView weather_after_tomorrow;
-    private ImageView weather_imag_after_tomorrow;
-    private TextView weather_after_tomorrow_temp;
-    private LinearLayout lnlay_weather_bg;
-    private ImageView img_line_weather;
+
+    private MainPagerAdapter mMainPagerAdapter;
+    private ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,31 +43,44 @@ public class MainActivity extends AppCompatActivity {
             tintManager.setStatusBarTintResource(R.color.colorBlack);//通知栏所需颜色
         }
         setContentView(R.layout.activity_main);
-        mCityName=(TextView)findViewById(R.id.weather_cityname);
-        weather_datetime=(TextView)findViewById(R.id.weather_datetime);
-        img_weatheriamg=(ImageView) findViewById(R.id.img_weatheriamg);
-        weather_temp=(TextView)findViewById(R.id.weather_temp);
-        weather_imgName=(TextView)findViewById(R.id.weather_imgName);
-        weather_tempall=(TextView)findViewById(R.id.weather_tempall);
-        weather_today=(TextView)findViewById(R.id.weather_today);
-        weather_imag_today=(ImageView) findViewById(R.id.weather_imag_today);
-        weather_today_temp=(TextView)findViewById(R.id.weather_today_temp);
-        weather_tomorrow=(TextView)findViewById(R.id.weather_tomorrow);
-        weather_imag_tomorrow=(ImageView) findViewById(R.id.weather_imag_tomorrow);
-        weather_tomorrow_temp=(TextView)findViewById(R.id.weather_tomorrow_temp);
-        weather_after_tomorrow=(TextView)findViewById(R.id.weather_after_tomorrow);
-        weather_imag_after_tomorrow=(ImageView) findViewById(R.id.weather_imag_after_tomorrow);
-        weather_after_tomorrow_temp=(TextView)findViewById(R.id.weather_after_tomorrow_temp);
-        lnlay_weather_bg=(LinearLayout)findViewById(R.id.lnlay_weather_bg);
-        img_line_weather=(ImageView)findViewById(R.id.img_line_weather);
 
-        //获取天气
-        GetWeatherAsyncTask getWeatherAsyncTask=new GetWeatherAsyncTask(mCityName,weather_datetime,
-                img_weatheriamg,weather_temp,weather_imgName,weather_tempall,weather_today,weather_imag_today
-        ,weather_today_temp,weather_tomorrow,weather_imag_tomorrow,weather_tomorrow_temp,weather_after_tomorrow
-        ,weather_imag_after_tomorrow,weather_after_tomorrow_temp,lnlay_weather_bg,img_line_weather);
+        mViewPager = (ViewPager) findViewById(R.id.container_main);
+        final TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs_main);
+        tabLayout.setupWithViewPager(mViewPager);
+        List<String> tabList =new ArrayList<>();
+        tabList.add(getString(R.string.main_btn_shouye));
+        tabList.add(getString(R.string.main_btn_mine));
+        tabLayout.setTabMode(TabLayout.MODE_FIXED);
+        tabLayout.addTab(tabLayout.newTab().setText(tabList.get(0)));
+        tabLayout.addTab(tabLayout.newTab().setText(tabList.get(1)));
+        mMainPagerAdapter = new MainPagerAdapter(getSupportFragmentManager(),tabList);
+        mViewPager.setAdapter(mMainPagerAdapter);
+        tabLayout.getTabAt(0).setIcon(R.mipmap.shouye_selecte);
+        tabLayout.getTabAt(1).setIcon(R.mipmap.kehu);
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                if (tab == tabLayout.getTabAt(0)) {
+                    tabLayout.getTabAt(0).setIcon(R.mipmap.shouye_selecte);
+                    mViewPager.setCurrentItem(0);
+                } else if (tab == tabLayout.getTabAt(1)) {
+                    tabLayout.getTabAt(1).setIcon(R.mipmap.kehu_selecte);
+                    mViewPager.setCurrentItem(1);
+                }
+            }
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                if (tab == tabLayout.getTabAt(0)) {
+                    tabLayout.getTabAt(0).setIcon(R.mipmap.shouye);
+                } else if (tab == tabLayout.getTabAt(1)) {
+                    tabLayout.getTabAt(1).setIcon(R.mipmap.kehu);
+                }
+            }
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
 
-        getWeatherAsyncTask.execute((Void)null);
+            }
+        });
 
 
     }

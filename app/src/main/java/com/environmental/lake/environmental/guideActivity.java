@@ -17,6 +17,7 @@ import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import com.environmental.lake.fragment.Fragment_main;
 import com.environmental.lake.util.SystemBarTintManager;
 
 public class GuideActivity extends AppCompatActivity {

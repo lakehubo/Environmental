@@ -13,7 +13,16 @@
     <string name="a_prize_competition">A prize competition</string>
     <string name="science_highlights">Science highlights</string>
     <string name="funny_games">Funny Games</string>
-
+    <string name="main_btn_shouye">Home</string>
+    <string name="main_btn_mine">Mine</string>
     <!--getweather-->
     <string name="weather_error">Get Weather Info Failed!</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>

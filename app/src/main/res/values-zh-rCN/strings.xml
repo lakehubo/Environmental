@@ -13,7 +13,8 @@
     <string name="a_prize_competition">有奖竞答</string>
     <string name="science_highlights">科普集萃</string>
     <string name="funny_games">趣味游戏</string>
-
+    <string name="main_btn_shouye">首页</string>
+    <string name="main_btn_mine">我的</string>
     <!--getweather-->
     <string name="weather_error">获取天气信息失败!</string>
 </resources>
