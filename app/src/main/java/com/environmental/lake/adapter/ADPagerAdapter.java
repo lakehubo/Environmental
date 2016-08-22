@@ -3,60 +3,57 @@ package com.environmental.lake.adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.environmental.lake.fragment.Fragment_ad;
+
+import java.util.List;
 
 /**
  * Created by lake on 2016/8/23.
  */
-public class ADPagerAdapter extends FragmentPagerAdapter implements ViewPager.OnPageChangeListener {
-    private ViewPager mViewPager;
-    public ADPagerAdapter(FragmentManager fm, ViewPager viewPager) {
-        super(fm);
-        this.mViewPager = viewPager;
+public class ADPagerAdapter extends PagerAdapter {
+    private List<View> mList;
+    private View mView;
+    @Override//具体作用，我也不是很清楚，后面理解后会补上
+    public boolean isViewFromObject(View view, Object object) {
+        return view==object;
     }
 
-    @Override
-    public Fragment getItem(int position) {
-        return Fragment_ad.newInstance(position + 1);
-
-    }
-
-    @Override
+    @Override//总共图片数
     public int getCount() {
-        return 5;
+        return mList.size();
+    }
+    //在这里我们传入List<>里的图片列表
+    public ADPagerAdapter (List<View> list) {
+        super();
+        this.mList=list;
     }
 
-
-    @Override
-    public CharSequence getPageTitle(int position) {
-        Log.e("getPageTitle", String.valueOf(position));
-        return " ";
+    @Override//这里加载图片
+    public Object instantiateItem(ViewGroup container, int position) {
+        if (position<mList.size()-1){
+            (container).addView(mList.get(position),0);
+            return mList.get(position);
+        }
+        return null;
     }
 
-    @Override
-    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-        Log.e("onPageScrolled", String.valueOf(position));
-    }
-
-    @Override
-    public void onPageSelected(int position) {
-        Log.e("onPageSelected", String.valueOf(position));
-        if (getCount() > 1) { //多于1，才会循环跳转
-            if (position < 1) { //首位之前，跳转到末尾（N）
-                position = 4; //注意这里是mList，而不是mViews
-                mViewPager.setCurrentItem(position, false);
-            } else if (position > 4) { //末位之后，跳转到首位（1）
-                mViewPager.setCurrentItem(1, false); //false:不显示跳转过程的动画
-                position = 1;
-            }
+    @Override//这里销毁图片
+    public void destroyItem(ViewGroup container, int position, Object object) {
+        if(position<mList.size()-1){
+            (container).removeView(mList.get(position));
         }
     }
 
     @Override
-    public void onPageScrollStateChanged(int state) {
-
+    public CharSequence getPageTitle(int position) {
+        Log.e("getPageTitle",String.valueOf(position));
+        return " ";
     }
+
 }

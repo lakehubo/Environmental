@@ -24,6 +24,7 @@ import android.widget.TextView;
 
 import com.environmental.lake.adapter.MainPagerAdapter;
 import com.environmental.lake.util.SystemBarTintManager;
+import com.environmental.lake.view.MyViewPager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +32,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private MainPagerAdapter mMainPagerAdapter;
-    private ViewPager mViewPager;
+    private MyViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         }
         setContentView(R.layout.activity_main);
 
-        mViewPager = (ViewPager) findViewById(R.id.container_main);
+        mViewPager = (MyViewPager) findViewById(R.id.container_main);
         final TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs_main);
         tabLayout.setupWithViewPager(mViewPager);
         List<String> tabList =new ArrayList<>();
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         mViewPager.setAdapter(mMainPagerAdapter);
         tabLayout.getTabAt(0).setIcon(R.mipmap.shouye_selecte);
         tabLayout.getTabAt(1).setIcon(R.mipmap.kehu);
+        mViewPager.setPagingEnabled(false);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
