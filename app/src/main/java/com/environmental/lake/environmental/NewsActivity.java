@@ -33,6 +33,6 @@ public class NewsActivity extends AppCompatActivity {
         strings[0]="test";
         imageViews[1]=R.color.color_blue;
         strings[1]="test2";
-        newsDatabeanList.add(new NewsDatabean(1,imageViews,strings));
+        newsDatabeanList.add(new NewsDatabean(2,imageViews,strings));
     }
 }
