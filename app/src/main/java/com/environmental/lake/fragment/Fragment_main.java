@@ -5,7 +5,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,13 +15,14 @@ import android.widget.TextView;
 import com.environmental.lake.adapter.ADPagerAdapter;
 import com.environmental.lake.adapter.PagerChangeListener;
 import com.environmental.lake.asynctask.GetWeatherAsyncTask;
+import com.environmental.lake.environmental.NewsActivity;
 import com.environmental.lake.environmental.R;
 import com.environmental.lake.environmental.SearchActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Fragment_main extends Fragment {
+public class Fragment_main extends Fragment implements View.OnClickListener {
     private TextView mCityName;
     private TextView weather_datetime;
     private ImageView img_weatheriamg;
@@ -44,38 +44,12 @@ public class Fragment_main extends Fragment {
     private ViewPager main_viewpager_ad;
     public boolean isStop = false;
     public  Thread mThread=null;
-
+    private LinearLayout lnlay_news;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootview=inflater.inflate(R.layout.fragment_main, container, false);
-        mCityName=(TextView)rootview.findViewById(R.id.weather_cityname);
-        weather_datetime=(TextView)rootview.findViewById(R.id.weather_datetime);
-        img_weatheriamg=(ImageView) rootview.findViewById(R.id.img_weatheriamg);
-        weather_temp=(TextView)rootview.findViewById(R.id.weather_temp);
-        weather_imgName=(TextView)rootview.findViewById(R.id.weather_imgName);
-        weather_tempall=(TextView)rootview.findViewById(R.id.weather_tempall);
-        weather_today=(TextView)rootview.findViewById(R.id.weather_today);
-        weather_imag_today=(ImageView)rootview.findViewById(R.id.weather_imag_today);
-        weather_today_temp=(TextView)rootview.findViewById(R.id.weather_today_temp);
-        weather_tomorrow=(TextView)rootview.findViewById(R.id.weather_tomorrow);
-        weather_imag_tomorrow=(ImageView) rootview.findViewById(R.id.weather_imag_tomorrow);
-        weather_tomorrow_temp=(TextView)rootview.findViewById(R.id.weather_tomorrow_temp);
-        weather_after_tomorrow=(TextView)rootview.findViewById(R.id.weather_after_tomorrow);
-        weather_imag_after_tomorrow=(ImageView) rootview.findViewById(R.id.weather_imag_after_tomorrow);
-        weather_after_tomorrow_temp=(TextView)rootview.findViewById(R.id.weather_after_tomorrow_temp);
-        lnlay_weather_bg=(LinearLayout)rootview.findViewById(R.id.lnlay_weather_bg);
-        img_line_weather=(ImageView)rootview.findViewById(R.id.img_line_weather);
-        main_viewpager_ad=(ViewPager)rootview.findViewById(R.id.main_viewpager_ad);
-        LnLay_search=(LinearLayout)rootview.findViewById(R.id.LnLay_search);
-        LnLay_search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent();
-                intent.setClass(getActivity(), SearchActivity.class);
-                startActivity(intent);
-            }
-        });
+        initviews(rootview);
         //获取天气
         GetWeatherAsyncTask getWeatherAsyncTask=new GetWeatherAsyncTask(mCityName,weather_datetime,
                 img_weatheriamg,weather_temp,weather_imgName,weather_tempall,weather_today,weather_imag_today
@@ -141,5 +115,66 @@ public class Fragment_main extends Fragment {
         pagerViews.add(imageview6);
         return pagerViews;
     }
+    private void initviews(View rootview){
+        mCityName=(TextView)rootview.findViewById(R.id.weather_cityname);
+        weather_datetime=(TextView)rootview.findViewById(R.id.weather_datetime);
+        img_weatheriamg=(ImageView) rootview.findViewById(R.id.img_weatheriamg);
+        weather_temp=(TextView)rootview.findViewById(R.id.weather_temp);
+        weather_imgName=(TextView)rootview.findViewById(R.id.weather_imgName);
+        weather_tempall=(TextView)rootview.findViewById(R.id.weather_tempall);
+        weather_today=(TextView)rootview.findViewById(R.id.weather_today);
+        weather_imag_today=(ImageView)rootview.findViewById(R.id.weather_imag_today);
+        weather_today_temp=(TextView)rootview.findViewById(R.id.weather_today_temp);
+        weather_tomorrow=(TextView)rootview.findViewById(R.id.weather_tomorrow);
+        weather_imag_tomorrow=(ImageView) rootview.findViewById(R.id.weather_imag_tomorrow);
+        weather_tomorrow_temp=(TextView)rootview.findViewById(R.id.weather_tomorrow_temp);
+        weather_after_tomorrow=(TextView)rootview.findViewById(R.id.weather_after_tomorrow);
+        weather_imag_after_tomorrow=(ImageView) rootview.findViewById(R.id.weather_imag_after_tomorrow);
+        weather_after_tomorrow_temp=(TextView)rootview.findViewById(R.id.weather_after_tomorrow_temp);
+        lnlay_weather_bg=(LinearLayout)rootview.findViewById(R.id.lnlay_weather_bg);
+        img_line_weather=(ImageView)rootview.findViewById(R.id.img_line_weather);
+        main_viewpager_ad=(ViewPager)rootview.findViewById(R.id.main_viewpager_ad);
+        LnLay_search=(LinearLayout)rootview.findViewById(R.id.LnLay_search);
+        lnlay_news=(LinearLayout)rootview.findViewById(R.id.lnlay_news);
 
+
+
+        lnlay_news.setOnClickListener(this);
+        LnLay_search.setOnClickListener(this);
+    }
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.lnlay_news:
+                Intent intent1=new Intent();
+                intent1.setClass(getActivity(), NewsActivity.class);
+                startActivity(intent1);
+                break;
+            case R.id.LnLay_search:
+                Intent intent=new Intent();
+                intent.setClass(getActivity(), SearchActivity.class);
+                startActivity(intent);
+                break;
+            default:
+                break;
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        isStop=false;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        isStop=true;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        isStop=true;
+    }
 }

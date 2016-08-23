@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/Lnlay_news_group_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/search_bg">
+    <FrameLayout
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+        <ImageView
+            android:background="@color/colorPrimary"
+            android:id="@+id/news_image_first"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <FrameLayout
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:paddingTop="5dp"
+                android:paddingRight="2dp"
+                android:paddingLeft="2dp"
+                android:textSize="16dp"
+                android:maxEms="18"
+                android:maxLength="36"
+                android:layout_gravity="bottom"
+                android:textColor="@color/colorWhite"
+                android:text="测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试!"
+                android:background="@color/color_half_dark"
+                android:id="@+id/news_first_tv"
+                android:lines="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

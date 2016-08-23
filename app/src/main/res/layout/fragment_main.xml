@@ -88,7 +88,9 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:background="@color/colorAccent"
+                        android:id="@+id/lnlay_news"
+                        android:clickable="true"
+                        android:background="@drawable/btn_mian_guide_selector"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginRight="2.5dp"
@@ -102,7 +104,8 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:background="@color/colorAccent"
+                        android:clickable="true"
+                        android:background="@drawable/btn_mian_guide_selector"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="2.5dp"
@@ -117,7 +120,8 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:background="@color/colorAccent"
+                        android:clickable="true"
+                        android:background="@drawable/btn_mian_guide_selector"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="2.5dp"
@@ -146,7 +150,8 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:background="@color/color_blue"
+                        android:clickable="true"
+                        android:background="@drawable/btn_mian_guide_s_selector"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginRight="2.5dp"
@@ -160,7 +165,8 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:background="@color/color_blue"
+                        android:clickable="true"
+                        android:background="@drawable/btn_mian_guide_s_selector"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="2.5dp"
@@ -175,7 +181,8 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:background="@color/color_blue"
+                        android:clickable="true"
+                        android:background="@drawable/btn_mian_guide_s_selector"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="2.5dp"
@@ -205,7 +212,8 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:background="@color/color_orange"
+                        android:clickable="true"
+                        android:background="@drawable/btn_mian_guide_t_selector"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginRight="2.5dp"
@@ -219,7 +227,8 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:background="@color/color_orange"
+                        android:clickable="true"
+                        android:background="@drawable/btn_mian_guide_t_selector"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="2.5dp"
@@ -234,7 +243,8 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:background="@color/color_orange"
+                        android:clickable="true"
+                        android:background="@drawable/btn_mian_guide_t_selector"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="2.5dp"

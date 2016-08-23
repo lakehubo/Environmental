@@ -11,4 +11,5 @@
     <color name="color_blue">#0099ff</color>
     <color name="color_orange">#ff9900</color>
     <color name="color_sky_blue">#10e4d8</color>
+    <color name="color_null">#00ffffff</color>
 </resources>
