@@ -17,4 +17,9 @@
     <string name="main_btn_mine">我的</string>
     <!--getweather-->
     <string name="weather_error">获取天气信息失败!</string>
+
+    <string name="title_activity_news">新闻动态</string>
+    <string name="title_activity_web">网站直通</string>
+
+    <string name="action_login">登录/注册</string>
 </resources>

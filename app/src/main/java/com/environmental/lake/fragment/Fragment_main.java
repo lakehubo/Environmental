@@ -18,6 +18,7 @@ import com.environmental.lake.asynctask.GetWeatherAsyncTask;
 import com.environmental.lake.environmental.NewsActivity;
 import com.environmental.lake.environmental.R;
 import com.environmental.lake.environmental.SearchActivity;
+import com.environmental.lake.environmental.WebActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +46,17 @@ public class Fragment_main extends Fragment implements View.OnClickListener {
     public boolean isStop = false;
     public  Thread mThread=null;
     private LinearLayout lnlay_news;
+    private LinearLayout Lnlay_web_site;
+    private LinearLayout Lnlay_ask_answer;
+    private LinearLayout Lnlay_download_files;
+    private LinearLayout Lnlay_activation_record;
+    private LinearLayout Lnlay_envir_policies;
+    private LinearLayout Lnlay_pirze_competition;
+    private LinearLayout Lnlay_science_highlights;
+    private LinearLayout Lnlay_funny_games;
+
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -136,25 +148,68 @@ public class Fragment_main extends Fragment implements View.OnClickListener {
         main_viewpager_ad=(ViewPager)rootview.findViewById(R.id.main_viewpager_ad);
         LnLay_search=(LinearLayout)rootview.findViewById(R.id.LnLay_search);
         lnlay_news=(LinearLayout)rootview.findViewById(R.id.lnlay_news);
+        Lnlay_web_site=(LinearLayout)rootview.findViewById(R.id.Lnlay_web_site);
+        Lnlay_ask_answer=(LinearLayout)rootview.findViewById(R.id.Lnlay_ask_answer);
+        Lnlay_download_files=(LinearLayout)rootview.findViewById(R.id.Lnlay_download_files);
+        Lnlay_activation_record=(LinearLayout)rootview.findViewById(R.id.Lnlay_activation_record);
+        Lnlay_envir_policies=(LinearLayout)rootview.findViewById(R.id.Lnlay_envir_policies);
+        Lnlay_pirze_competition=(LinearLayout)rootview.findViewById(R.id.Lnlay_pirze_competition);
+        Lnlay_science_highlights=(LinearLayout)rootview.findViewById(R.id.Lnlay_science_highlights);
+        Lnlay_funny_games=(LinearLayout)rootview.findViewById(R.id.Lnlay_funny_games);
 
 
-
-        lnlay_news.setOnClickListener(this);
         LnLay_search.setOnClickListener(this);
+        lnlay_news.setOnClickListener(this);
+        Lnlay_web_site.setOnClickListener(this);
+        Lnlay_ask_answer.setOnClickListener(this);
+        Lnlay_download_files.setOnClickListener(this);
+        Lnlay_activation_record.setOnClickListener(this);
+        Lnlay_envir_policies.setOnClickListener(this);
+        Lnlay_pirze_competition.setOnClickListener(this);
+        Lnlay_science_highlights.setOnClickListener(this);
+        Lnlay_funny_games.setOnClickListener(this);
     }
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.lnlay_news:
-                Intent intent1=new Intent();
-                intent1.setClass(getActivity(), NewsActivity.class);
-                startActivity(intent1);
-                break;
             case R.id.LnLay_search:
                 Intent intent=new Intent();
                 intent.setClass(getActivity(), SearchActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.lnlay_news:
+                Intent intent1=new Intent();
+                intent1.setClass(getActivity(), NewsActivity.class);
+                startActivity(intent1);
+                break;
+
+            case R.id.Lnlay_web_site:
+                Intent intent2=new Intent();
+                intent2.setClass(getActivity(), WebActivity.class);
+                startActivity(intent2);
+                break;
+            case R.id.Lnlay_ask_answer:
+
+                break;
+            case R.id.Lnlay_download_files:
+
+                break;
+            case R.id.Lnlay_activation_record:
+
+                break;
+            case R.id.Lnlay_envir_policies:
+
+                break;
+            case R.id.Lnlay_pirze_competition:
+
+                break;
+            case R.id.Lnlay_science_highlights:
+
+                break;
+            case R.id.Lnlay_funny_games:
+
+                break;
+
             default:
                 break;
         }

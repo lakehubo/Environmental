@@ -104,6 +104,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/Lnlay_web_site"
                         android:clickable="true"
                         android:background="@drawable/btn_mian_guide_selector"
                         android:layout_width="match_parent"
@@ -120,6 +121,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/Lnlay_ask_answer"
                         android:clickable="true"
                         android:background="@drawable/btn_mian_guide_selector"
                         android:layout_width="match_parent"
@@ -150,6 +152,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:id="@+id/Lnlay_download_files"
                         android:clickable="true"
                         android:background="@drawable/btn_mian_guide_s_selector"
                         android:layout_width="match_parent"
@@ -165,6 +168,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/Lnlay_activation_record"
                         android:clickable="true"
                         android:background="@drawable/btn_mian_guide_s_selector"
                         android:layout_width="match_parent"
@@ -181,6 +185,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/Lnlay_envir_policies"
                         android:clickable="true"
                         android:background="@drawable/btn_mian_guide_s_selector"
                         android:layout_width="match_parent"
@@ -212,6 +217,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:id="@+id/Lnlay_pirze_competition"
                         android:clickable="true"
                         android:background="@drawable/btn_mian_guide_t_selector"
                         android:layout_width="match_parent"
@@ -227,6 +233,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/Lnlay_science_highlights"
                         android:clickable="true"
                         android:background="@drawable/btn_mian_guide_t_selector"
                         android:layout_width="match_parent"
@@ -243,6 +250,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/Lnlay_funny_games"
                         android:clickable="true"
                         android:background="@drawable/btn_mian_guide_t_selector"
                         android:layout_width="match_parent"
