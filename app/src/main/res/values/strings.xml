@@ -25,6 +25,23 @@
     <string name="title_activity_web">Web Site</string>
 
     <string name="action_login">Login/Register</string>
+    <string name="action_login_login">Login</string>
+    <string name="action_login_register">Register</string>
+    <string name="action_login_name">Username</string>
+    <string name="action_login_password">Password</string>
+    <string name="action_login_namehit">username or email</string>
+    <string name="action_login_passwordhint">6-20 letters, numbers, and compliance</string>
 
 
+    <string name="mine_download">download</string>
+    <string name="mine_message">message</string>
+    <string name="mine_comment">comment</string>
+    <string name="mine_setting">setting</string>
+    <string name="mine_moreapp">recommended application</string>
+    <string name="mine_versionent">latest version</string>
+    <string name="mine_collection">collection</string>
+    <string name="mine_game">games</string>
+    <string name="mine_weather">weather</string>
+    <string name="mine_more">more</string>
+    <string name="mine_about">about</string>
 </resources>

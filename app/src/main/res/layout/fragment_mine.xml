@@ -17,6 +17,8 @@
             android:background="@color/colorWhite">
 
             <LinearLayout
+                android:id="@+id/Lnlay_login"
+                android:clickable="true"
                 android:layout_width="120dp"
                 android:layout_height="30dp"
                 android:layout_gravity="bottom|center_horizontal"
@@ -45,6 +47,27 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/mine_setting_bg">
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center|left"
+                    android:text="@string/mine_message"
+                    android:layout_gravity="left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center|right"
+                    android:layout_gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:background="@mipmap/you"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -59,7 +82,27 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp">
-
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|left"
+                        android:text="@string/mine_download"
+                        android:layout_gravity="left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|right"
+                        android:layout_gravity="left"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:background="@mipmap/you"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
                 </LinearLayout>
                 <ImageView
                     android:background="@color/color_deflate"
@@ -68,7 +111,27 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp">
-
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|left"
+                        android:text="@string/mine_comment"
+                        android:layout_gravity="left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|right"
+                        android:layout_gravity="left"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:background="@mipmap/you"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
                 </LinearLayout>
                 <ImageView
                     android:background="@color/color_deflate"
@@ -77,12 +140,58 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp">
-
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|left"
+                        android:text="@string/mine_collection"
+                        android:layout_gravity="left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|right"
+                        android:layout_gravity="left"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:background="@mipmap/you"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
                 </LinearLayout>
                 <ImageView
                     android:background="@color/color_deflate"
                     android:layout_width="match_parent"
                     android:layout_height="0.1dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|left"
+                        android:text="@string/mine_setting"
+                        android:layout_gravity="left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|right"
+                        android:layout_gravity="left"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:background="@mipmap/you"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -97,7 +206,27 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp">
-
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|left"
+                        android:text="@string/mine_game"
+                        android:layout_gravity="left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|right"
+                        android:layout_gravity="left"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:background="@mipmap/you"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
                 </LinearLayout>
                 <ImageView
                     android:background="@color/color_deflate"
@@ -106,7 +235,27 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp">
-
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|left"
+                        android:text="@string/mine_weather"
+                        android:layout_gravity="left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|right"
+                        android:layout_gravity="left"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:background="@mipmap/you"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
                 </LinearLayout>
                 <ImageView
                     android:background="@color/color_deflate"
@@ -115,7 +264,27 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp">
-
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|left"
+                        android:text="@string/mine_moreapp"
+                        android:layout_gravity="left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|right"
+                        android:layout_gravity="left"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:background="@mipmap/you"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
                 </LinearLayout>
                 <ImageView
                     android:background="@color/color_deflate"
@@ -124,7 +293,27 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp">
-
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|left"
+                        android:text="@string/mine_versionent"
+                        android:layout_gravity="left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|right"
+                        android:layout_gravity="left"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:background="@mipmap/you"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
                 </LinearLayout>
                 <ImageView
                     android:background="@color/color_deflate"
@@ -133,12 +322,60 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp">
-
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|left"
+                        android:text="@string/mine_more"
+                        android:layout_gravity="left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|right"
+                        android:layout_gravity="left"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:background="@mipmap/you"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
                 </LinearLayout>
                 <ImageView
                     android:background="@color/color_deflate"
                     android:layout_width="match_parent"
                     android:layout_height="0.1dp" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|left"
+                        android:text="@string/mine_about"
+                        android:layout_gravity="left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|right"
+                        android:layout_gravity="left"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:background="@mipmap/you"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
